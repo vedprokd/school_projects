@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Topics - School Projects</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <h1>Project Topics</h1>
+  <p>Explore interesting ideas for your next school or college project</p>
+</header>
+<nav>
+  <a href="/">Home</a>
+  <a href="/topics">Topics</a>
+  <a href="/about">About</a>
+  <a href="/contact">Contact</a>
+</nav>
+<div class="container">
+  {% for topic in topics %}
+     <div class="topic">
+        <h3>{{ topic.title }}</h3>
+        <p>{{ topic.desc }}</p>
+     </div>
+  {% endfor %}
+</div>
+<footer>
+<p>&copy; 2025 School Projects</p>
+</footer>
+</body>
+</html>
